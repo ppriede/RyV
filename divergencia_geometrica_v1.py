@@ -65,7 +65,7 @@ df2 = df.sort_values(by=['distancia'])
 """
 ### Resultado:
 """
-#df[-1:]
+'El nivel calculado a una distancia de ',  distancia_usuario, ' es de ', nivel_usuario, ' dB'
 
 # --------------------------------
 # Despligue de información
