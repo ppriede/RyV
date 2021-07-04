@@ -6,10 +6,10 @@ import pandas as pd
 import time
 import plotly.express as px
 
-st.set_page_config(page_title='Divergencia Geometrica')
+st.set_page_config(page_title='Divergencia geométrica simple')
 
 """
-# :symbols: Divergencia geometrica simple  :chart_with_upwards_trend: :chart_with_downwards_trend:
+# :symbols: Divergencia geométrica simple  :chart_with_upwards_trend: :chart_with_downwards_trend:
 Datos de entrada
 - Lw
 - Distancia
@@ -52,7 +52,7 @@ for i in range(puntos):
     }, ignore_index=True)
     la_distancia = la_distancia + pasos
 
-nivel_usuario = round(lw - 8 - 20*np.log10(distancia_usuario),1)
+nivel_usuario = round(lw - 8 - 20*np.log10(distancia_usuario),5)
 
 df = df.append({
         'distancia': distancia_usuario,
@@ -90,12 +90,12 @@ fig.add_vrect(
     line_width=0
 )
 
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 # --------------------------------
 # Informacion adicionalr
 # --------------------------------
 expander = st.beta_expander("Referencia")
-expander.write("Parametro Adiv del estandar [ISO 9613-2](https://www.iso.org/standard/20649.html).")
-expander.write("De manera simplificada, se puede expresar de acuerdo a la siguiente ecuacion.")
+expander.write("Parámetro Adiv del estándar [ISO 9613-2](https://www.iso.org/standard/20649.html).")
+expander.write("De manera simplificada, se puede expresar de acuerdo a la siguiente ecuación.")
 expander.latex(r'''NPS = Lw - 8 - 20*log_{10}(d)''')
