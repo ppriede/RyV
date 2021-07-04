@@ -9,7 +9,7 @@ import plotly.express as px
 st.set_page_config(page_title='Divergencia geométrica simple')
 
 """
-# :symbols: Divergencia geométrica simple  :chart_with_upwards_trend: :chart_with_downwards_trend:
+# :symbols: Divergencia geométrica simple
 Datos de entrada
 - Lw
 - Distancia
