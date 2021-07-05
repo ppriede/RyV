@@ -9,7 +9,7 @@ def app():
     import time
     import plotly.express as px
 
-    st.set_page_config(page_title='Divergencia geométrica simple')
+    #st.set_page_config(page_title='Divergencia geométrica simple')
 
     st.write("""
         Datos de entrada
